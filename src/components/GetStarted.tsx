@@ -25,7 +25,7 @@ export function GetStarted() {
             <p className="text-lg text-white/90 mb-10 leading-relaxed">
               Join our community and start your journey to financial freedom through KDP publishing
             </p>
-            <a href="https://t.me/DsamkdpConsultancy" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/DsamkdpConsult" target="_blank" rel="noopener noreferrer">
             <button className="px-8 py-4 bg-orange-500 text-white rounded-lg font-semibold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started Today
             </button>
