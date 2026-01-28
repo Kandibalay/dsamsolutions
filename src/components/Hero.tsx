@@ -1,0 +1,262 @@
+import React from 'react';
+import { ArrowRight, Search, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
+import circle from '../assets/black circle.jpg';
+// import Amazon1 from '../assets/Amazon image 3.jpg';
+// import Amazon2 from '../../public/abid-shah-cxAV7aUesIQ-unsplash.jpg';
+// import Amazon3 from '../../public/anirudh-wKeZstqxKTQ-unsplash.jpg';
+// import Amazon4 from '../../public/appshunter-io-pzvTXga0SCY-unsplash.jpg';
+import Amazon5 from '/christian-wiediger-rymh7EZPqRs-unsplash.jpg';
+
+
+const heroSlides = [
+  {
+    image: Amazon5,
+    title: "KDP Success Guide by DSAM",
+    subtitle: "Learn the proven strategies to create, publish, and profit from Amazon KDP. From book creation to marketing mastery—everything you need to build a successful publishing business."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1610731826702-6ded935d39a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbWF6b24lMjBraW5kbGUlMjBib29rcyUyMHJlYWRpbmd8ZW58MXx8fHwxNzY1NDc2MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: "Scale up Your Amazon KDP Results to $5k/Month",
+    subtitle:  "Transform your KDP journey from struggling to thriving. Join the exclusive inner circle where ordinary people achieve extraordinary results."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    title:"Stop Guessing. Start Earning.",
+    subtitle: "The same strategies that helped hundreds reach $5k/month are waiting for you. No fluff, just results."
+  }
+];
+
+const testimonials = [
+  {
+    text: "DSAM's strategies are pure gold. Finally making consistent income from KDP publishing.",
+    author: "David Samuel",
+    role: "KDP Publisher"
+  },
+  {
+    text: "I never thought I could achieve this level of success. The course provided me with the tools I needed.",
+    author: "James",
+    role: "KDP Entrepreneur"
+  },
+  
+  {
+    text: "The step-by-step guidance made it so easy. constantly making over $3,000 Monthly!",
+    author: "David Peter",
+    role: "KDP-Publisher"
+  },
+  
+];
+
+export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 7000);
+    return () => clearInterval(slideInterval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  };
+
+   const scrollToGetStarted = () => {
+    const element = document.getElementById('getstarted');
+    if (element) {
+      const offset = 80; // Adjust based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background Images */}
+      {heroSlides.map((slide, index) => (
+        <motion.div
+          key={index}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: index === currentSlide ? 1 : 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img
+            src={slide.image}
+            alt={`Hero background ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-accent/60"></div>
+        </motion.div>
+      ))}
+
+      {/* Hero Content */}
+      <div className="relative z-10 container mx-auto px-6 pt-32 pb-32">
+        <div className="max-w-3xl">
+          <div className="mb-8">
+            <motion.div 
+              className="inline-block text-white/90 mb-4 px-4 py-2 bg-orange-500/20 backdrop-blur-sm rounded-full border border-orange-300/30"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Master Amazon KDP Publishing
+            </motion.div>
+            <motion.h1 
+              key={`title-${currentSlide}`}
+              className="text-white mb-6 text-6xl md:text-7xl "
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              {heroSlides[currentSlide].title}
+            </motion.h1>
+          </div>
+          <motion.p 
+            key={`subtitle-${currentSlide}`}
+            className="text-xl text-white/90 mb-10 max-w-2xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {heroSlides[currentSlide].subtitle}
+          </motion.p>
+          <motion.button 
+            className="bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition-all flex items-center gap-2 group shadow-lg shadow-orange-500/30"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={scrollToGetStarted}
+          >
+            Get Started Today
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </motion.button>
+        </div>
+
+        {/* Testimonial Carousel */}
+        <div className="absolute bottom-12 right-12 hidden lg:block">
+          <motion.div 
+            className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 max-w-md shadow-2xl"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <motion.img
+                key={`img-${currentTestimonial}`}
+                src={circle}
+                alt="Student"
+                className="w-12 h-12 rounded-full object-cover"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+              <div>
+                <motion.p 
+                  key={`text-${currentTestimonial}`}
+                  className="text-gray-800 mb-3"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  "{testimonials[currentTestimonial].text}"
+                </motion.p>
+                <motion.div
+                  key={`author-${currentTestimonial}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <div className="text-sm text-gray-900">{testimonials[currentTestimonial].author}</div>
+                  <div className="text-sm text-primary">{testimonials[currentTestimonial].role}</div>
+                </motion.div>
+              </div>
+            </div>
+            <div className="flex items-center justify-end gap-2">
+              <motion.button
+                onClick={prevTestimonial}
+                className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </motion.button>
+              <motion.button
+                onClick={nextTestimonial}
+                className="w-8 h-8 rounded-full bg-primary hover:bg-accent text-white flex items-center justify-center transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronRight className="w-4 h-4" />
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Hero Slide Navigation */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-4">
+        <motion.button
+          onClick={prevSlide}
+          className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center transition-colors"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <ChevronLeft className="w-5 h-5 text-white" />
+        </motion.button>
+        
+        <div className="flex gap-2">
+          {heroSlides.map((_, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-1 rounded-full transition-all ${
+                index === currentSlide ? 'w-12 bg-white' : 'w-12 bg-white/30'
+              }`}
+              animate={{
+                scale: index === currentSlide ? 1.1 : 1,
+              }}
+            />
+          ))}
+        </div>
+
+        <motion.button
+          onClick={nextSlide}
+          className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center transition-colors"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <ChevronRight className="w-5 h-5 text-white" />
+        </motion.button>
+      </div>
+    </div>
+  );
+}
