@@ -387,7 +387,7 @@ export function Testimonials() {
             <div className="bg-white rounded-2xl p-8 md:p-12 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">The Beginning</h3>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Five years ago, I started my KDP journey with nothing but determination and a laptop. My first year was tough – earning only $200-300 per month, I questioned whether this path was worth it.
+                Five years ago, I started my KDP journey with nothing but determination and a phone. My first year was tough – earning only $200-300 per month, I questioned whether this path was worth it.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 But I didn't give up. I studied every successful publisher, tested countless strategies, and slowly but surely, I began to understand what worked. Each book I published taught me something new.

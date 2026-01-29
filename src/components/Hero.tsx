@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Search, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Search, Menu, ChevronLeft, ChevronRight, ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
@@ -158,8 +158,8 @@ export function Hero() {
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTestimonials}
           >
-           Scroll to see more
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+           Scroll down to see more
+            <ArrowDown className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
         </div>
 
