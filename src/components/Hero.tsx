@@ -14,18 +14,18 @@ import Amazon6 from '/sunrise-king-HIctpU2PA8E-unsplash.jpg';
 const heroSlides = [
   {
     image: Amazon5,
-    title: "KDP Success Guide by DSAM",
+    title: "Start a profitable KDP Business Earning 1000-5000$ Monthly",
     subtitle: "Learn the proven strategies to create, publish, and profit from Amazon KDP. From book creation to marketing mastery—everything you need to build a successful publishing business."
   },
   {
     image: "https://images.unsplash.com/photo-1610731826702-6ded935d39a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbWF6b24lMjBraW5kbGUlMjBib29rcyUyMHJlYWRpbmd8ZW58MXx8fHwxNzY1NDc2MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "Scale up Your Amazon KDP Results to $5k/Month",
-    subtitle:  "Transform your KDP journey from struggling to thriving. Join the exclusive inner circle where ordinary people achieve extraordinary results."
+    title: "Learn From Scratch to Advanced in KDP Publishing",
+    subtitle:  "Learn how to engage AI tools to create high-quality, low-content books that sell. learn marketing strategies that drive traffic and boost sales on Amazon KDP."
   },
   {
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-    title:"Stop Guessing. Start Earning.",
-    subtitle: "The same strategies that helped hundreds reach $5k/month are waiting for you. No fluff, just results."
+    title:"Shy about showing your Face to make money?  Don't worry",
+    subtitle: "All you need is the skills you would be learning in this course. The same strategies that helped hundreds reach $5k/month are waiting for you. No fluff, just results."
   }
 ];
 

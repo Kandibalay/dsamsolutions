@@ -11,10 +11,25 @@ export function Navbar() {
 
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'course', label: 'Course' },
+    // { id: 'about', label: 'About' },
+    // { id: 'course', label: 'Course' },
     { id: 'testimonials', label: 'Testimonials' },
   ];
+
+
+  const scrollToGetStarted = () => {
+    const element = document.getElementById('getstarted');
+    if (element) {
+      const offset = 80; // Adjust based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Telegram channel link - Replace with your actual telegram link
   const telegramLink = "https://t.me/DsamkdpConsult";
@@ -59,6 +74,8 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
 
   return (
     <motion.nav
@@ -124,15 +141,15 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <a href={telegramLink} target="_blank" rel="noopener noreferrer">
+              
                 <motion.button
                   className="bg-orange-500 text-white px-6 py-2.5 rounded-lg hover:bg-orange-600 transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={scrollToGetStarted}
                 >
                   Get Started
                 </motion.button>
-              </a>
             </motion.div>
           </div>
 
