@@ -15,16 +15,16 @@ const heroSlides = [
   {
     image: Amazon5,
     title: "Start a profitable KDP Business Earning 1000-5000$ Monthly",
-    subtitle: "Learn the proven strategies to create, publish, and profit from Amazon KDP. From book creation to marketing mastery—everything you need to build a successful publishing business."
+    subtitle: "Never heard of Amazon KDP? or you have probably heard but don't know how to profit from it. Learn how to build a successful KDP business from scratch. From book creation to marketing mastery—everything you need to build a successful publishing business."
   },
   {
     image: "https://images.unsplash.com/photo-1610731826702-6ded935d39a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbWF6b24lMjBraW5kbGUlMjBib29rcyUyMHJlYWRpbmd8ZW58MXx8fHwxNzY1NDc2MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "Learn From Scratch to Advanced in KDP Publishing",
-    subtitle:  "Learn how to engage AI tools to create high-quality, low-content books that sell. learn marketing strategies that drive traffic and boost sales on Amazon KDP."
+    title: "Learn From Scratch to Advanced all about KDP Publishing",
+    subtitle:  "You would Learn the basics of book creation, also how to leverage AI tools to create high-quality, low-content books that sell. You would also learn marketing strategies that drive traffic and boost sales on Amazon KDP."
   },
   {
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-    title:"Shy about showing your Face to make money?  Don't worry",
+    title:"Shy about showing your Face? Don't worry",
     subtitle: "All you need is the skills you would be learning in this course. The same strategies that helped hundreds reach $5k/month are waiting for you. No fluff, just results."
   }
 ];
