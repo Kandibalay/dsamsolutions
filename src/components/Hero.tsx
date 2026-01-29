@@ -3,11 +3,12 @@ import { ArrowRight, Search, Menu, ChevronLeft, ChevronRight } from 'lucide-reac
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import circle from '../assets/black circle.jpg';
-// import Amazon1 from '../assets/Amazon image 3.jpg';
-// import Amazon2 from '../../public/abid-shah-cxAV7aUesIQ-unsplash.jpg';
-// import Amazon3 from '../../public/anirudh-wKeZstqxKTQ-unsplash.jpg';
-// import Amazon4 from '../../public/appshunter-io-pzvTXga0SCY-unsplash.jpg';
+import Amazon1 from '../assets/Amazon image 3.jpg';
+import Amazon2 from '/abid-shah-cxAV7aUesIQ-unsplash.jpg';
+import Amazon3 from '/anirudh-wKeZstqxKTQ-unsplash.jpg';
+import Amazon4 from '/appshunter-io-pzvTXga0SCY-unsplash.jpg';
 import Amazon5 from '/christian-wiediger-rymh7EZPqRs-unsplash.jpg';
+import Amazon6 from '/sunrise-king-HIctpU2PA8E-unsplash.jpg';
 
 
 const heroSlides = [
@@ -112,7 +113,7 @@ export function Hero() {
             alt={`Hero background ${index + 1}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-accent/60"></div>
+          <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
         </motion.div>
       ))}
 

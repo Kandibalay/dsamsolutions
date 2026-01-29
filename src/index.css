@@ -1480,7 +1480,34 @@
       background-color: color-mix(in oklab, var(--color-orange-500) 20%, transparent);
     }
   }
+.bg-orange-500\/30 {
+    background-color: color-mix(in srgb, oklch(.705 .213 47.604) 30%, transparent);
+  }
 
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-orange-500\/30 {
+      background-color: color-mix(in oklab, var(--color-orange-500) 30%, transparent);
+    }
+  }
+  .bg-orange-500\/40 {
+    background-color: color-mix(in srgb, oklch(.705 .213 47.604) 40%, transparent);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-orange-500\/40 {
+      background-color: color-mix(in oklab, var(--color-orange-500) 40%, transparent);
+    }
+  }
+  .bg-orange-300\/20 {
+    background-color: color-mix(in srgb, oklch(.705 .213 47.604) 20%, transparent);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-orange-300\/20 {
+      background-color: color-mix(in oklab, var(--color-orange-300) 20%, transparent);
+    }
+  }
+   
   .bg-pink-50 {
     background-color: var(--color-pink-50);
   }
@@ -1498,7 +1525,26 @@
       background-color: color-mix(in oklab, var(--primary) 10%, transparent);
     }
   }
+.bg-primary\/20 {
+    background-color: var(--primary);
+  }
 
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/20 {
+      background-color: color-mix(in oklab, var(--primary) 20%, transparent);
+    }
+  }
+  .bg-primary\/60 {
+    background-color: var(--primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/60 {
+      background-color: color-mix(in oklab, var(--primary) 60%, transparent);
+    }
+  }
+    
+    
   .bg-primary\/90 {
     background-color: var(--primary);
   }
