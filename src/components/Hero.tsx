@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Search, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import circle from '../assets/black circle.jpg';
 import Amazon1 from '../assets/Amazon image 3.jpg';
 import Amazon2 from '/abid-shah-cxAV7aUesIQ-unsplash.jpg';
@@ -83,8 +84,8 @@ export function Hero() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
-   const scrollToGetStarted = () => {
-    const element = document.getElementById('getstarted');
+   const scrollToTestimonials = () => {
+    const element = document.getElementById('testimonials');
     if (element) {
       const offset = 80; // Adjust based on your navbar height
       const elementPosition = element.getBoundingClientRect().top;
@@ -155,9 +156,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={scrollToGetStarted}
+            onClick={scrollToTestimonials}
           >
-            Get Started Today
+           Scroll to see more
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
         </div>
