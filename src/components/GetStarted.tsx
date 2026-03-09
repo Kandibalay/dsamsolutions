@@ -75,7 +75,7 @@ export function GetStarted() {
               Join our community and start your journey to financial freedom through KDP publishing
             </p>
             <a 
-              href="https://t.me/DsamkdpConsult" 
+              href="https://t.me/Dsamkdp" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={handleGetStarted}

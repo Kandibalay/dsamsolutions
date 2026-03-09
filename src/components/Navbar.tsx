@@ -32,7 +32,7 @@ export function Navbar() {
   };
 
   // Telegram channel link - Replace with your actual telegram link
-  const telegramLink = "https://t.me/DsamkdpConsult";
+  const telegramLink = "https://t.me/Dsamkdp";
 
   // Smooth scroll function
   const scrollToSection = (sectionId) => {
